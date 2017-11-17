@@ -5,33 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link href=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css” rel=“stylesheet” integrity=“sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u” crossorigin=“anonymous”>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-
     
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     
 </head>
 <body>
 <header>
 <div id="main">
-    <h1>This Is HANGMAN!</h1>
+        <h1>This Is HANGMAN!</h1>
 </header>
     <div id="click-begin" onclick="startGame()"><h1 id="click">Click to begin!</h1></div>
-</div>
-<p id="game-board"></p>
-    <div id="wins">
-        <h1>You have guessed correctly:</h1>
-    </div>
-    <br>
-    <div id="losses">
-        <h1>You have died:</h1> 
-    </div>
-    <br>
-    <br>
-    <div id="missed">
+    <p id="game-board"></p>
+</div> 
 
+<div class="row">
+    <div class="col-sm-6">
+        <div id="wins">
+            <p>You have guessed correctly:</p>
     </div>
+    <div class="col-sm-6">
+    <div id="missed">
+        <p>Missed letters:</p>
+     </div>
+    </div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+    <div id="losses">
+            <p>You have died:</p> 
+        </div>
+        <div class="col-sm-6">
+        <div id="countdown">
+            <p>Guesses left:</p>
+        </div>
+    </div>
+    </div>
+    </div>
+  
+    <iframe id="video" width="460" height="215" src="https://www.youtube.com/embed/EDmOActAPxM?start=174" frameborder="0" allowfullscreen></iframe>
 </body>
 <script type="text/javascript" src="./assets/javascript/game.js"></script>
 </html>

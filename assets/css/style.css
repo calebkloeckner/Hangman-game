@@ -1,9 +1,19 @@
 body {
-    background-color: red;
+    background-image: url("https://vignette1.wikia.nocookie.net/pirates/images/2/2e/Jack_Sparrow_Hanging_COTBP.jpg/revision/latest?cb=20100921224600");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   font-family: 'Satisfy', cursive;
+
+   
+
+  
+
 }
 #main {
     text-align: center;
     margin: auto;
+    color: white;
 }
 #game {
     width: 100%;
@@ -20,14 +30,37 @@ body {
 }
 
 #click-begin {
-    background-color: green;
+    
     font-size: 20px;
     width: 300px;
     margin: auto;
     text-align: center;
+    color: white;
 }
 
-#wins, #losses {
-    margin: auto;
+#wins, #losses, #missed, #countdown {
+    /* margin: auto; */
     text-align: center;
+    border: 3px solid white;
+    /* width: 100%;
+    max-width: 500px; */
 }
+
+p {
+    font-size: 30px;
+    color: white;
+}
+
+/* #wins, #losses {
+    float: left;
+    margin: 3%;
+}
+
+#missed, #countdown {
+    float: left;
+    margin: 3%;
+} */
+ #video {
+     margin: auto;
+     position: right;
+ }
