@@ -59,35 +59,44 @@ console.log("working");
 var hangman = ["baseball", "america", "what", "beach"];
 
 var guesses = [];
+var letters = [];
 var wins = 0;
 var losses = 0;
 var missed;
 var countdown = 10;
+var word;
+var answerArray;
 
 function startGame() {
 console.log("startGame");
 
-var word = hangman[Math.floor(Math.random() * hangman.length)];
+word = hangman[Math.floor(Math.random() * hangman.length)];
 console.log(word);
-document.querySelector("#click-begin").innerHTML = ("Good luck");
-var answerArray = []; 
+document.querySelector("#click-begin").innerHTML = ("Let The Games Begin");
+answerArray = []; 
     for (var i = 0; i < word.length; i++) { // takes lenght of word
-answerArray.push("_");  
+answerArray.push(" _ ");  
 document.querySelector("#game-board").innerHTML = answerArray;
 }
+letters = word.split("");
+console.log(letters);
+}
 
+
+function draw(key) {
+    drawnWord = "";
+for (var j = 0; j < letters.length; j++) { // matches guess in to word
+     if (letters[j] === key) {
+        answerArray[j] = key; 
+        drawnWord = true;
+        document.querySelector("#game-board").innerHTML = answerArray;
+    }
+   console.log(key);
+};
 }
 document.onkeyup = function(event) { // listening to key being pushed
 var drawnWord = "";
-
-function draw() {
-    drawnWord = "";
-for (var j = 0; j < word.length; j++) { // matches guess in to word
-     if (word[j] === guess) {
-        answerArray[j] = guess; 
-        drawnWord = true;
-    }
-    drawnWord.includes(guess);
-};
-}
+var select = event.key;
+draw(select);
+console.log(select);
 }

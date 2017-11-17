@@ -1,13 +1,33 @@
 body {
     background-color: red;
 }
-
+#main {
+    text-align: center;
+    margin: auto;
+}
 #game {
     width: 100%;
     height: 100%;
     
 }
 
-#click h1 {
-    background-color: blue;
+#game-board {
+    font-size: 30px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+#click-begin {
+    background-color: green;
+    font-size: 20px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#wins, #losses {
+    margin: auto;
+    text-align: center;
 }
