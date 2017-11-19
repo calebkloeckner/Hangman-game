@@ -5,10 +5,6 @@ body {
    background-size: cover;
    font-family: 'Satisfy', cursive;
 
-   
-
-  
-
 }
 #main {
     text-align: center;
@@ -30,7 +26,6 @@ body {
 }
 
 #click-begin {
-    
     font-size: 20px;
     width: 300px;
     margin: auto;
@@ -61,6 +56,7 @@ p {
     margin: 3%;
 } */
  #video {
+     /* display: none; */
      margin: auto;
      position: right;
  }

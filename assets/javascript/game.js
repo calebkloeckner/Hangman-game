@@ -62,46 +62,57 @@ var guesses = [];
 var letters = [];
 var wins = 0;
 var losses = 0;
-var missed;
+var missed = [];
 var countdown = 10;
 var word;
 var answerArray;
-
-
 
 function startGame() {
 console.log("startGame");
     document.querySelector("#countdown").innerHTML = countdown;
     word = hangman[Math.floor(Math.random() * hangman.length)];
 console.log(word);
-    document.querySelector("#click-begin").innerHTML = ("Let The Games Begin");
+    document.querySelector("#click-begin").innerHTML = ("<h1>Let The Games Begin<h1>");
     answerArray = []; 
     for (var i = 0; i < word.length; i++) { // takes lenght of word
-        answerArray.push(" _ ");  
+        answerArray.push("_ ");  
         document.querySelector("#game-board").innerHTML = answerArray;
 }
     letters = word.split("");
 console.log(letters);
-}
 
 
 function draw(key) {
     drawnWord = "";
+    var notFound = false;
 for (var j = 0; j < letters.length; j++) { // matches guess in to word
      if (letters[j] === key) {
         answerArray[j] = key; 
-        // drawnWord = true;
         document.querySelector("#game-board").innerHTML = answerArray;
+        notFound = true;
         
-    }
+    }  
    console.log(key);
 }
-    
-        // document.querySelector("#wins").innerHTML = wins++;
-    
-if (missed =)
-    
-    
+     if (notFound === false) {
+        countdown--;       
+        missed.push(key);
+        document.querySelector("#missedLetters").innerHTML = missed.join(' , ');
+        document.querySelector("#countdown").innerHTML = countdown; 
+}
+    if (drawnWord === word) {
+        console.log(word);
+        alert("You live today!");
+        wins++;
+        document.querySelector("#won").innerHTML = wins;
+    }
+    else if (countdown === 0) {
+        losses++;
+        alert("You lose: Play video")
+        document.querySelector("#fail").innerHTML = losses;
+        startGame();
+    }
+
 };
 document.onkeyup = function(event) { // listening to key being pushed
 var drawnWord = "";
@@ -109,7 +120,7 @@ var select = event.key;
 draw(select);
 console.log(select);
 }
+}   
 
-if (countdown = 0) {
-    losses++;
-}
+ 
+
