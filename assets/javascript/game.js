@@ -56,7 +56,7 @@ console.log("working");
 // // document.querySelector("#game").innerHTML = html;
 
 
-var hangman = ["baseball", "america", "what", "beach"];
+var hangman = ["black pearl", "pirate", "crossbones", "ocean", "beach", "captian"];
 
 var guesses = [];
 var letters = [];
