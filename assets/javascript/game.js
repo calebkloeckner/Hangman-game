@@ -66,6 +66,7 @@ var missed = [];
 var countdown = 10;
 var word;
 var answerArray;
+var drawnWord;
 
 function startGame() {
 console.log("startGame");
@@ -81,7 +82,6 @@ console.log(word);
     letters = word.split("");
 console.log(letters);
 
-
 function draw(key) {
     drawnWord = "";
     var notFound = false;
@@ -89,8 +89,7 @@ for (var j = 0; j < letters.length; j++) { // matches guess in to word
      if (letters[j] === key) {
         answerArray[j] = key; 
         document.querySelector("#game-board").innerHTML = answerArray;
-        notFound = true;
-        
+        notFound = true;        
     }  
    console.log(key);
 }
@@ -98,7 +97,8 @@ for (var j = 0; j < letters.length; j++) { // matches guess in to word
         countdown--;       
         missed.push(key);
         document.querySelector("#missedLetters").innerHTML = missed.join(' , ');
-        document.querySelector("#countdown").innerHTML = countdown; 
+        document.querySelector("#countdown").innerHTML = countdown;
+        document.querySelector("draw").innerHTML;
 }
     if (drawnWord === word) {
         console.log(word);
@@ -112,7 +112,6 @@ for (var j = 0; j < letters.length; j++) { // matches guess in to word
         document.querySelector("#fail").innerHTML = losses;
         startGame();
     }
-
 };
 document.onkeyup = function(event) { // listening to key being pushed
 var drawnWord = "";

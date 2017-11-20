@@ -30,18 +30,23 @@ body {
     width: 300px;
     margin: auto;
     text-align: center;
-    color: white;
+    color: rgb(248, 250, 165);
 }
 
 #wins, #losses, #missed, #countdown {
     /* margin: auto; */
     text-align: center;
-    border: 3px solid white;
+    border: 3px solid rgb(131, 92, 92);
     /* width: 100%;
     max-width: 500px; */
 }
 
 p {
+    font-size: 40px;
+    color: white;
+}
+
+#countdown {
     font-size: 30px;
     color: white;
 }
@@ -57,6 +62,6 @@ p {
 } */
  #video {
      /* display: none; */
-     margin: auto;
-     position: right;
+     margin-left: 30%;
+     margin-right: 30%;
  }
