@@ -77,13 +77,13 @@ console.log(word);
     answerArray = []; 
     for (var i = 0; i < word.length; i++) { // takes lenght of word
         answerArray.push("_ ");  
-        document.querySelector("#game-board").innerHTML = answerArray;
+        document.querySelector("#game-board").innerHTML = answerArray.join("");
 }
     letters = word.split("");
 console.log(letters);
 
 function draw(key) {
-    drawnWord = "";
+    drawnWord = [];
     var notFound = false;
 for (var j = 0; j < letters.length; j++) { // matches guess in to word
      if (letters[j] === key) {
@@ -93,19 +93,23 @@ for (var j = 0; j < letters.length; j++) { // matches guess in to word
     }  
    console.log(key);
 }
+
      if (notFound === false) {
         countdown--;       
         missed.push(key);
         document.querySelector("#missedLetters").innerHTML = missed.join(' , ');
         document.querySelector("#countdown").innerHTML = countdown;
-        document.querySelector("draw").innerHTML;
+        // document.querySelector("draw").innerHTML;
 }
-    if (drawnWord === word) {
-        console.log(word);
-        alert("You live today!");
+
+    if (answerArray.join("") === word) {
+        console.log(word); 
         wins++;
         document.querySelector("#won").innerHTML = wins;
+        alert("You live today!");
     }
+
+
     else if (countdown === 0) {
         losses++;
         alert("You lose: Play video")

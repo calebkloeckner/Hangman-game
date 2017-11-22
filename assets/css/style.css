@@ -34,11 +34,10 @@ body {
 }
 
 #wins, #losses, #missed, #countdown {
-    /* margin: auto; */
+ 
     text-align: center;
     border: 3px solid rgb(131, 92, 92);
-    /* width: 100%;
-    max-width: 500px; */
+
 }
 
 p {
@@ -51,17 +50,8 @@ p {
     color: white;
 }
 
-/* #wins, #losses {
-    float: left;
-    margin: 3%;
-}
 
-#missed, #countdown {
-    float: left;
-    margin: 3%;
-} */
  #video {
-     /* display: none; */
      margin-left: 30%;
      margin-right: 30%;
  }
